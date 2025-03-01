@@ -45,12 +45,143 @@ nav #btn-nav{
     padding: 5px;
 }
 
+
+
+
+
+/* /////////////// list */
 .list{
     position: fixed;
     left: 0;
     background-color: #111;
     z-index: 999;
-    width: 280px;
+    width: 250px;
     height: 100vh;
     border-right: 2px solid #222;
+    padding: 5px 10px;
+    letter-spacing: .5px;
+    transform: translateX(-5000px);
+}
+/* profile */
+.list .profile-list{
+    margin: 10px 0;
+}
+.list .profile-list *{
+    display: block;
+}
+.list .profile-list i{
+    font-size: 150px;
+    text-align: center;
+    padding: 10px;
+    color:gray;
+}
+.list .profile-list .name-list{
+    text-align: center;
+    opacity: .85;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.list .profile-list .describe-list{
+    opacity: .6;
+    font-size: 12px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+.list .profile-list .btn-edite-profile{
+    background-color: #222;
+    border: 2px solid #222;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.list .profile-list .btn-edite-profile:hover,.list .mood .p-list-li:hover,
+.list .font .p-list-li:hover,.list .btn-list-default:hover{
+    background-color: #111;
+    border: 2px solid #222;
+    letter-spacing: 1.5px;
+
+}
+
+.list .mood,.list .font{
+    margin: 20px 0;
+}
+.list .mood .p-list-li,.list .font .p-list-li,.list .btn-list-default{
+    padding: 10px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    background-color: #222;
+    border: 2px solid #222;
+    text-align: center;
+}
+.list .mood .p-list-li i,.list .font .p-list-li i{
+    position: absolute;
+    right: 10px;
+}
+
+.list .btn-list-default{
+    position: absolute;
+    width: 92%;
+    bottom: 20px;
+}
+
+.list .mood ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    margin: 10px 0 0 0 ;
+    padding: 10px 0 0 0;
+    opacity: 0;
+    display: none;
+
+}
+.list .mood ul li{
+    cursor: pointer;
+}
+
+.list .font ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 10px 5px;
+    list-style: none;
+    gap: 10px;
+    opacity: 0;
+    display: none;
+}
+.list .font ul li{
+    cursor: pointer;
+}
+.list .font ul li:hover,.list .mood ul li:hover{
+    opacity: .7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////// js  classes */
+
+/* عند ظهور القائمة */
+.list .mood ul.toggle-list-ul {
+    display: flex;
+
+}
+
+.ha-list{
+    transform: translateX(0);
 }
